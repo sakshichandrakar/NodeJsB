@@ -1,0 +1,203 @@
+<html>
+    <head>
+       {{>headerLink}}
+       <style>
+           body:before, body:after {
+  content: "IMAGES FROM UNSPLASH.COM";
+  position: absolute;
+  top: 0px;
+  color: #00000000;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 0 -1px 1px #000000ab, 0 1px 1px #ffffff82;
+  font-family: Arial, serif;
+  padding: 2px 10px;
+  border-radius: 2px;
+  font-size: 9px;
+  display: flex;
+  align-items: flex-end;
+  line-height: 14px;
+}
+
+body:after {
+  top: inherit;
+  bottom: 0;
+  position: relative;
+  margin-top: -12px;
+  transform: translateX(-100%);
+  margin-left: 90px;
+  width: 150px;
+}
+
+img { 
+  width: 100%;
+}
+
+.gallery {
+  display: flex;
+  padding: 5px;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 25%;
+  padding: 5px;
+
+}
+
+.column figure {
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+
+.column figure img {
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.column figure:active {
+  height: auto; 
+  width: auto;
+  max-width: 80%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  border: 10px solid #fff;
+  margin: 0px;
+  z-index: 33;
+  box-shadow: 0 0 1000px 1000px #fff8;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.column figure:active img {
+  margin-top: 0;
+  margin-bottom: -4px;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Arial, Helvetica, serif;
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  mix-blend-mode: screen;
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 0.25;
+}
+
+.column figure:hover figcaption,
+.column figure:active figcaption {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .column {
+    flex: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .column {
+    flex: 100%;
+  }
+}
+       </style>
+    </head>
+    <body>
+        {{>navbar}}
+
+        <!---Start Main section----> 
+        <div class="container-fluid main_header">
+            <div class ="row">
+                <div class="col-md-10 col-12 mx-auto">
+                        <div class="gallery">
+                            <div class="column">
+                                <figure>
+                                    <img src="images/prashant/img1.webp">
+                                    <figcaption>2013</figcaption>
+                                </figure> 
+                                <figure>
+                                    <img src="images/prashant/img2.webp"/>
+                                    <figcaption>2022</figcaption>
+                                </figure> 
+                                <figure>
+                                    <img src="images/prashant/img4.webp"/>
+                                    <figcaption>Beach</figcaption>
+                                </figure> 
+                                <figure>
+                                    <img src="images/prashant/img5.webp"/>
+                                    <figcaption>Forest</figcaption>
+                                </figure> 
+                            </div>
+                            <div class="column">
+                                <figure>
+                            <img src="images/prashant/img7.webp"/>
+                            <figcaption>Iceland</figcaption>
+                            </figure>  
+                                <figure>
+                            <img src="images/prashant/img6.webp"/>
+                            <figcaption>River</figcaption>
+                            </figure>  
+                                <figure>
+                            <img src="images/prashant/img17.webp"/>
+                            <figcaption>Grass</figcaption>
+                            </figure>  
+                                <figure>
+                            <img src="images/prashant/img20.webp"/>
+                            <figcaption>Tundra</figcaption>
+                            </figure>  
+                            </div>
+                            <div class="column">
+                                <figure>
+                            <img src="images/prashant/img11.webp">
+                            <figcaption>Boreal</figcaption>
+                            </figure> 
+                            <figure>
+                            <img src="images/prashant/img9.webp"/>
+                            <figcaption>Lake</figcaption>
+                            </figure> 
+                                <figure>
+                            <img src="images/prashant/img14.webp"/>
+                            <figcaption>Tropical</figcaption>
+                            </figure> 
+                                <figure>
+                            <img src="images/prashant/img13.webp"/>
+                            <figcaption>Marine</figcaption>
+                            </figure> 
+                            </div>
+                            <div class="column">
+                                <figure>
+                            <img src="images/prashant/img8.webp"/>
+                            <figcaption>Ocean</figcaption>
+                            </figure>  
+                                <figure>
+                            <img src="images/prashant/img12.webp"/>
+                            <figcaption>Savanna</figcaption>
+                            </figure>  
+                                <figure>
+                            <img src="images/prashant/img10.webp"/>
+                            <figcaption>GrassLand</figcaption>
+                            </figure>  
+                                <figure>
+                            <img src="images/prashant/img16.webp"/>
+                            <figcaption>Artic</figcaption>
+                            </figure>  
+                            </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+        <!---End Main section----> 
+      {{>footer}}
+      
+
+    </body>
+</html>
